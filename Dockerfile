@@ -2,8 +2,7 @@ FROM alpine:3.4
 
 MAINTAINER Alex Drahon <adrahon@gmail.com>
 
-RUN apk add --update imagemagick && \
-    rm -rf /var/cache/apk/*
+RUN apk add --no-cache imagemagick
 COPY whiteboard.sh /bin/wb
 WORKDIR /images
 
