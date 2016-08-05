@@ -7,5 +7,5 @@ RUN apk add --update imagemagick && \
 COPY whiteboard.sh /bin/wb
 WORKDIR /images
 
-# usage docker run -v "$(pwd)":/images whiteboard wb source.jpg destination.jpg
-CMD ["wb"]
+# usage docker run --rm -v "$(pwd)":/images whiteboard source.jpg destination.jpg
+ENTRYPOINT ["wb"]
